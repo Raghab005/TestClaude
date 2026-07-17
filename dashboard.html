@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome, {{ user['username'] }}! 👋</h2>
+    <p>You are logged in.</p>
+    <ul class="user-info">
+        <li><strong>Username:</strong> {{ user['username'] }}</li>
+        <li><strong>Email:</strong> {{ user['email'] }}</li>
+    </ul>
+    <a href="{{ url_for('logout') }}" class="btn btn-secondary">Log Out</a>
+</div>
+{% endblock %}
